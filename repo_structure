@@ -1,0 +1,26 @@
+powerbi-bim-lineage-parser/
+│
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   └── model.bim              # wejściowy plik (przykład)
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── load_json.py           # wczytanie .bim / json
+│   ├── flatten_json.py        # uniwersalny flatten
+│   ├── extract_tables.py      # tabele + partitions
+│   ├── extract_sources.py     # SQL / M sources
+│   ├── extract_joins.py       # Table.NestedJoin / LOOKUPVALUE
+│   └── lineage_builder.py     # finalny lineage
+│
+├── outputs/
+│   ├── flattened.json
+│   ├── tables.csv
+│   ├── sources.csv
+│   ├── joins.csv
+│   └── lineage.csv
+│
+└── run.py                     # main entrypoint
